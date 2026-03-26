@@ -82,13 +82,13 @@ export default function CatalogoPage() {
 
       {/* Category index nav */}
       <nav className="border-b border-[#162040] bg-[#0D1628]" aria-label="Categorías">
-        <div className="px-6 sm:px-10">
-          <ul className="flex gap-0 divide-x divide-[#162040]" role="list">
+        <div className="px-6 sm:px-10 overflow-x-auto">
+          <ul className="flex gap-0 divide-x divide-[#162040] min-w-max sm:min-w-0 sm:flex-wrap" role="list">
             {estilos.map(({ slug, label }) => (
               <li key={slug}>
                 <a
                   href={`#${slug}`}
-                  className="flex items-center px-6 py-4 text-[10px] tracking-[0.25em] uppercase text-[#5A6F85] hover:text-[#D4AE35] transition-colors font-semibold"
+                  className="flex items-center px-4 sm:px-6 py-4 text-[10px] tracking-[0.25em] uppercase text-[#5A6F85] hover:text-[#D4AE35] transition-colors font-semibold whitespace-nowrap"
                 >
                   {label}
                 </a>
